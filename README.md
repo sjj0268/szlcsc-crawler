@@ -6,7 +6,6 @@
 
 - 自动抓取立创商城所有分类下的电子元器件型号数据
 - 支持浏览器 Web GUI（Flask），双击即用
-- 提供完整版和 8 分钟试用版
 - 输出 CSV 和 JSON 两种格式
 - 数据保存到桌面 `szlcsc_data` 目录
 
@@ -52,31 +51,15 @@ python szlcsc_gui.py
 ```bash
 pip install pyinstaller
 
-# 完整版
 python -m PyInstaller --onefile --name szlcsc_crawler \
   --hidden-import=playwright --hidden-import=requests \
   --hidden-import=bs4 --hidden-import=lxml --hidden-import=flask \
   --hidden-import=jinja2 --hidden-import=markupsafe \
   --hidden-import=itsdangerous --hidden-import=click \
   szlcsc_gui.py
-
-# 试用版（8分钟倒计时）
-python -m PyInstaller --onefile --name szlcsc_crawler_trial \
-  --hidden-import=playwright --hidden-import=requests \
-  --hidden-import=bs4 --hidden-import=lxml --hidden-import=flask \
-  --hidden-import=jinja2 --hidden-import=markupsafe \
-  --hidden-import=itsdangerous --hidden-import=click \
-  szlcsc_gui_trial.py
 ```
 
 打包后的 EXE 在 `dist/` 目录下，可直接发给他人使用（无需安装 Python）。
-
-## 文件说明
-
-| 文件 | 说明 |
-|------|------|
-| `szlcsc_gui.py` | 完整版源码（无时间限制） |
-| `szlcsc_gui_trial.py` | 试用版源码（8分钟倒计时） |
 
 ## 技术栈
 
