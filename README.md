@@ -77,7 +77,6 @@ python -m PyInstaller --onefile --name szlcsc_crawler_trial \
 |------|------|
 | `szlcsc_gui.py` | 完整版源码（无时间限制） |
 | `szlcsc_gui_trial.py` | 试用版源码（8分钟倒计时） |
-| `szlcsc_对话记录.md` | 项目开发记录 |
 
 ## 技术栈
 
